@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Tắt hoàn toàn log của Hibernate -->
+    <logger name="org.hibernate" level="OFF" />
+    <logger name="org.hibernate.SQL" level="OFF" />
+    <logger name="org.hibernate.type" level="OFF" />
+    <logger name="org.hibernate.stat" level="OFF" />
+    <logger name="org.hibernate.tool.hbm2ddl" level="OFF" />
+    <logger name="org.hibernate.hql" level="OFF" />
+
+    <!-- Tắt log cho kết nối JDBC và JPA nếu cần -->
+    <logger name="org.springframework.orm.jpa" level="OFF" />
+    <logger name="org.springframework.jdbc" level="OFF" />
+
+    <!-- Root logger -->
+    <root level="ERROR">
+        <appender-ref ref="Console" />
+    </root>
+
+    <!-- Console Appender -->
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+</configuration>
